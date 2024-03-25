@@ -1,7 +1,11 @@
 import path from 'path';
-import { Configuration } from 'webpack';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import type { Configuration } from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
+const devServer: DevServerConfiguration = {
+  historyApiFallback: true,
+};
 const config: Configuration = {
   mode: (process.env.NODE_ENV as 'production' | 'development' | undefined) ?? 'development',
   entry: './src/index.tsx',
@@ -30,6 +34,7 @@ const config: Configuration = {
       patterns: [{ from: 'public' }],
     }),
   ],
+  devServer,
 };
 
 export default config;
