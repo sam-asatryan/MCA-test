@@ -29,7 +29,7 @@ export const PodcastDetailsPage: React.FC = () => {
             <h2>Episodes: {details?.items.length}</h2>
           </div>
           <div>
-            <Table />
+            <Table items={details?.items || []} podcastId={podcastId || ''} />
           </div>
         </section>
       </main>
