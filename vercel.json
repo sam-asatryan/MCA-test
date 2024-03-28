@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    {"source": "/podcast/:podcastId", "destination": "/"},
-    {"source": "/podcast/:podcastId/episode/:episodeId", "destination": "/"}
-  ]
-}
