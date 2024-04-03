@@ -2,6 +2,8 @@
 
 ---
 
+[Live demo](https://sam-asatryan.github.io/MCA-test)
+
 ### Run the app locally:
 1. git clone 
 2. npm install
