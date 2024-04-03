@@ -1,17 +1,21 @@
 {
-  "name": "MCA",
+  "name": "mca",
   "version": "1.0.0",
   "description": "test task for MCA",
+  "homepage": "https://sam-asatryan.github.io/MCA-test",
   "main": "./src/index.js",
   "scripts": {
     "start": "NODE_ENV=development TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack serve --mode=development",
     "build": "NODE_ENV=production TS_NODE_PROJECT=\"tsconfig.webpack.json\" webpack build --mode=production",
     "serve-build": "serve dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Dmitrii Kupriunin",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "isomorphic-dompurify": "^2.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
