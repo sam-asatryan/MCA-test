@@ -8,7 +8,6 @@ const root = createRoot(rootElement!);
 
 root.render(
   <StrictMode>
-    {/*<RouterProvider router={router} />*/}
-    <h1>Big text telling the website works</h1>
+    <RouterProvider router={router} />
   </StrictMode>,
 );
